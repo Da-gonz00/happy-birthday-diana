@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Diana</title>
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D685WZ6N88"></script>
+<!--
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D685WZ6N88');
+     function trackButtonClick(activity) {
+            // Send an event to Google Analytics
+            gtag('event', 'click', {
+                'event_category': 'Button Click',
+                'event_label': activity,
+                'value': 1
+            });
+        }
+</script>
+-->
+</head>
+<body>
+    <div class="container">
+        <div class="text_container">
+            <h1 class="header_text">Happy Birthday Diana Esmeralda Lozano!</h1>
+            <h2>I can't believe you're 23 now! Wow you're getting old</h2>
+            <h2>In all seriousness, happy birthday I really hope you have a good day</h2>
+            <h2>Would you like to know something?</h2>
+        </div>
+        <div class="gif_container">
+            <img src="green-splatoon.gif" alt="green-splatoon">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">Yes I would love to </button>
+          <button class="btn" id="noButton" onclick="moveButton()">No I hate you</button>
+        </div>
+    </div>
+    <script>
+        function nextPage() {
+            window.location.href = "yes.html";
+        }
+       
+       /* function shrinkButton() {
+            var noButton = document.getElementById('noButton');
+            var currentWidth = noButton.offsetWidth;
+            var currentHeight = noButton.offsetHeight;
+            noButton.style.width = currentWidth * 0.9 + 'px';
+            noButton.style.height = currentHeight * 0.9 + 'px';
+            noButton.style.fontSize = parseInt(window.getComputedStyle(noButton).fontSize) * 0.9 + 'px';
+            noButton.style.padding = parseInt(window.getComputedStyle(noButton).paddingTop) * 0.9 + 'px ' +
+                                     parseInt(window.getComputedStyle(noButton).paddingRight) * 0.9 + 'px';
+        } */
+        function moveButton() {
+            var noButton = document.getElementById('noButton');
+
+            // Set inline CSS for smooth transition
+            noButton.style.transition = 'left 0.3s ease, top 0.3s ease';
+
+            // Get the window dimensions
+            var windowWidth = window.innerWidth;
+            var windowHeight = window.innerHeight;
+
+            // Generate random positions within the window
+            var randomX = Math.floor(Math.random() * (windowWidth - noButton.offsetWidth));
+            var randomY = Math.floor(Math.random() * (windowHeight - noButton.offsetHeight));
+
+            // Move the button to the new random position
+            noButton.style.position = 'absolute';
+            noButton.style.left = randomX + 'px';
+            noButton.style.top = randomY + 'px';
+        }
+    </script>
+</body>
+</html>
